@@ -24,7 +24,7 @@ Users can specify the registry through a `feature_store.yaml` config file, or pr
 repo_config = RepoConfig(
     registry=RegistryConfig(path="gs://feast-test-gcs-bucket/registry.pb"),
     project="feast_demo_gcp",
-    provider="gcp",thon
+    provider="gcp",
     offline_store="file",  # Could also be the OfflineStoreConfig e.g. FileOfflineStoreConfig
     online_store="null",  # Could also be the OnlineStoreConfig e.g. RedisOnlineStoreConfig
 )

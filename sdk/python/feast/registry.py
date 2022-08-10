@@ -65,6 +65,7 @@ REGISTRY_STORE_CLASS_FOR_TYPE = {
     "S3RegistryStore": "feast.infra.aws.S3RegistryStore",
     "LocalRegistryStore": "feast.infra.local.LocalRegistryStore",
     "PostgreSQLRegistryStore": "feast.infra.registry_stores.contrib.postgres.registry_store.PostgreSQLRegistryStore",
+    "AzureRegistryStore": "feast.infra.registry_stores.contrib.azure.registry_store.AzBlobRegistryStore"
 }
 
 REGISTRY_STORE_CLASS_FOR_SCHEME = {
@@ -992,9 +993,6 @@ class Registry(BaseRegistry):
             f"{data_source.__class__.__module__}.{data_source.__class__.__name__}"
         )
         data_source_proto.project = project
-        data_source_proto.data_source_class_type = (
-            f"{data_source.__class__.__module__}.{data_source.__class__.__name__}"
-        )
         registry.data_sources.append(data_source_proto)
         if commit:
             self.commit()
