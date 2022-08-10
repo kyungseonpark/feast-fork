@@ -65,7 +65,7 @@ REGISTRY_STORE_CLASS_FOR_TYPE = {
     "S3RegistryStore": "feast.infra.aws.S3RegistryStore",
     "LocalRegistryStore": "feast.infra.local.LocalRegistryStore",
     "PostgreSQLRegistryStore": "feast.infra.registry_stores.contrib.postgres.registry_store.PostgreSQLRegistryStore",
-    "AzureRegistryStore": "feast.infra.registry_stores.contrib.azure.registry_store.AzBlobRegistryStore"
+    "AzureRegistryStore": "feast.infra.registry_stores.contrib.azure.registry_store.AzBlobRegistryStore",
 }
 
 REGISTRY_STORE_CLASS_FOR_SCHEME = {
